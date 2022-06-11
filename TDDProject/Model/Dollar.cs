@@ -19,5 +19,12 @@ namespace TDDProject.Model
         {
             amount *= multiplier;
         }
+
+        public override bool Equals(object? obj)
+        {
+            Dollar dollar = (Dollar) obj;
+
+            return amount == dollar.amount;
+        }
     }
 }
