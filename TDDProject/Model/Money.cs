@@ -30,6 +30,8 @@ namespace TDDProject.Model
             return new Franc(amount, "CHF");
         }
 
+        public abstract int Plus(int amountAdd);
+
         public abstract string Currency();
     }
 }

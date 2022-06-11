@@ -1,3 +1,4 @@
+
 using TDDProject.Model;
 using Xunit;
 
@@ -51,16 +52,24 @@ namespace TDDTest
         [Fact]
         public void DollarAdditionTest()
         {
-            int dollarSum = Money.Dollar(10).Plus(Money.Dollar(20));
+            int dollarSum = Money.Dollar(10).Plus(20);
             Assert.Equal(30,dollarSum);
         }
 
         [Fact]
         public void FrancAdditionTest()
         {
-            int francSum = Money.Franc(15).Plus(Money.Franc(20));
+            int francSum = Money.Franc(15).Plus(20);
             Assert.Equal(35, francSum);
         }
 
+        [Fact]
+        public void PrintCurrency()
+        {
+            Assert.True("10 USD" == Money.Dollar(10).ToString());
+            Assert.True("50 CHF" == Money.Franc(50).ToString());
+        }
     }
+    //Assert.False("10 USD" == Money.Dollar(20).ToString());
+    //Assert.False("50 CHF" == Money.Franc(100).ToString());
 }

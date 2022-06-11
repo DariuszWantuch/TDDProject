@@ -27,6 +27,18 @@ namespace TDDProject.Model
             amount *= multiplier;
         }
 
+        public override int Plus(int amountAdd)
+        {
+            this.amount += amountAdd;
+
+            return this.amount;
+        }
+
+        public override string ToString()
+        {
+            return this.amount + " " + this.currency;
+        }
+
         public int GetAmount()
         {
             return amount;

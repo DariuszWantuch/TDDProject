@@ -21,6 +21,17 @@ namespace TDDProject.Model
         {
             return currency;
         }
+        public override int Plus(int amountAdd)
+        {
+            this.amount += amountAdd;
+
+            return this.amount;
+        }
+
+        public override string ToString()
+        {
+            return this.amount + " " + this.currency;
+        }
 
         public void Multiplication(int multiplier)
         {
