@@ -9,10 +9,12 @@ namespace TDDProject.Model
     public class Franc : Money
     {
         private int amount;
+        private string currency;
 
-        public Franc(int amount)
+        public Franc(int amount, string currency)
         {
             this.amount = amount;
+            this.currency = currency;
         }
 
         public void Multiplication(int multiplier)
@@ -23,6 +25,11 @@ namespace TDDProject.Model
         public int GetAmount()
         {
             return amount;
+        }
+
+        public override string Currency()
+        {
+            return currency;
         }
     }
 }

@@ -44,8 +44,8 @@ namespace TDDTest
         [Fact]
         public void CurrencyTest()
         {
-            Assert.Equal("USD", Money.Dollar(1).Currency());
-            Assert.Equal("CHF", Money.Franc(1).Currency());
+            Assert.Equal("USD", Money.Dollar(5).Currency());
+            Assert.Equal("CHF", Money.Franc(5).Currency());
         }
     }
 }

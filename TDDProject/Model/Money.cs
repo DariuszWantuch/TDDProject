@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TDDProject.Model
 {
-    public class Money 
+    public abstract class Money 
     {
         protected int amount;
 
@@ -16,6 +16,8 @@ namespace TDDProject.Model
 
             return amount == money.amount;
         }
+
+        public abstract string Currency();
     }
 }
 
