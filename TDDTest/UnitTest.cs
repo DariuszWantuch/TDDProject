@@ -13,6 +13,8 @@ namespace TDDTest
             Assert.Equal(50, dollar.GetAmount());
             dollar.Multiplication(10);
             Assert.Equal(500, dollar.GetAmount());
+            dollar.Multiplication(2);
+            Assert.False(999 == dollar.GetAmount());
         }
 
         [Fact]
@@ -29,6 +31,8 @@ namespace TDDTest
             Assert.Equal(50, franc.GetAmount());
             franc.Multiplication(10);
             Assert.Equal(500, franc.GetAmount());
+            franc.Multiplication(2);
+            Assert.False(999 == franc.GetAmount());
         }
 
         [Fact]
