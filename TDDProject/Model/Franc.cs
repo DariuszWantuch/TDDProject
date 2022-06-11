@@ -17,6 +17,11 @@ namespace TDDProject.Model
             this.currency = currency;
         }
 
+        public override string Currency()
+        {
+            return currency;
+        }
+
         public void Multiplication(int multiplier)
         {
             amount *= multiplier;
@@ -27,9 +32,6 @@ namespace TDDProject.Model
             return amount;
         }
 
-        public override string Currency()
-        {
-            return currency;
-        }
+        
     }
 }
