@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TDDProject.Model
 {
-    public class Dollar
+    public class Dollar : Money
     {
         private int amount;
 
@@ -18,13 +18,6 @@ namespace TDDProject.Model
         public void Multiplication(int multiplier)
         {
             amount *= multiplier;
-        }
-
-        public override bool Equals(object? obj)
-        {
-            Dollar dollar = (Dollar) obj;
-
-            return amount == dollar.amount;
         }
 
         public int GetAmount()
