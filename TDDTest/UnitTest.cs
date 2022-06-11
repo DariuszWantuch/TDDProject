@@ -20,5 +20,15 @@ namespace TDDTest
         {
             Assert.True(new Dollar(50).Equals(new Dollar(50)));
         }
+
+        [Fact]
+        public void FrancTestMultiplication()
+        {
+            Franc franc = new Franc(10);
+            franc.Multiplication(5);
+            Assert.Equal(50, franc.GetAmount());
+            franc.Multiplication(10);
+            Assert.Equal(500, franc.GetAmount());
+        }
     }
 }
