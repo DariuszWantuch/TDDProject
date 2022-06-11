@@ -30,5 +30,11 @@ namespace TDDTest
             franc.Multiplication(10);
             Assert.Equal(500, franc.GetAmount());
         }
+
+        [Fact]
+        public void FrancEqualityTest()
+        {
+            Assert.True(new Franc(50).Equals(new Franc(50)));
+        }
     }
 }
