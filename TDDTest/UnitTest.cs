@@ -68,8 +68,10 @@ namespace TDDTest
         {
             Assert.True("10 USD" == Money.Dollar(10).ToString());
             Assert.True("50 CHF" == Money.Franc(50).ToString());
+            Assert.False("10 USD" == Money.Dollar(20).ToString());
+            Assert.False("50 CHF" == Money.Franc(100).ToString());
         }
+
     }
-    //Assert.False("10 USD" == Money.Dollar(20).ToString());
-    //Assert.False("50 CHF" == Money.Franc(100).ToString());
+    
 }
