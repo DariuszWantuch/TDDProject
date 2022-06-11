@@ -20,14 +20,14 @@ namespace TDDProject.Model
         }
 
 
-        public static Money Dollar(int amount, string currency)
+        public static Money Dollar(int amount)
         {
-            return new Dollar(amount, currency);
+            return new Dollar(amount, "USD");
         }
 
-        public static Money Franc(int amount, string currency)
+        public static Money Franc(int amount)
         {
-            return new Franc(amount, currency);
+            return new Franc(amount, "CHF");
         }
 
         public abstract string Currency();
