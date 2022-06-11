@@ -14,5 +14,11 @@ namespace TDDTest
             dollar.Multiplication(10);
             Assert.Equal(500, dollar.amount);
         }
+
+        [Fact]
+        public void DollarEqualityTest()
+        {
+            Assert.True(new Dollar(50).Equals(new Dollar(50)));
+        }
     }
 }
