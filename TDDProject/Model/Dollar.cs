@@ -8,7 +8,7 @@ namespace TDDProject.Model
 {
     public class Dollar
     {
-        public int amount;
+        private int amount;
 
         public Dollar(int amount)
         {
@@ -25,6 +25,11 @@ namespace TDDProject.Model
             Dollar dollar = (Dollar) obj;
 
             return amount == dollar.amount;
+        }
+
+        public int GetAmount()
+        {
+            return amount;
         }
     }
 }
