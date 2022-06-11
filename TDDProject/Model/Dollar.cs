@@ -12,7 +12,7 @@ namespace TDDProject.Model
         private int amount;
         private string currency;
 
-        public Dollar(int amount,string currency)
+        public Dollar(int amount, string currency = "")
         {
             this.amount = amount;
             this.currency = currency;
