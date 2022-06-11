@@ -1,3 +1,4 @@
+using TDDProject.Model;
 using Xunit;
 
 namespace TDDTest
@@ -9,7 +10,7 @@ namespace TDDTest
         {
             Dollar dollar = new Dollar(10);
             dollar.Multiplication(5);
-            Assert.Equal(50, dollar.ammount);
+            Assert.Equal(50, dollar.amount);
         }
     }
 }
