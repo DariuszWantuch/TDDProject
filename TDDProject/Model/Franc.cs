@@ -46,6 +46,11 @@ namespace TDDProject.Model
             return this.amount + " " + this.currency;
         }
 
+        public override void Reduce(int reduceAmount)
+        {
+            this.amount -= reduceAmount;
+        }
+
         public int GetAmount()
         {
             return amount;

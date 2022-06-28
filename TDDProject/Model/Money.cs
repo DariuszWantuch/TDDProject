@@ -24,6 +24,8 @@ namespace TDDProject.Model
 
         public abstract int Plus(int amountAdd);
 
+        public abstract void Reduce(int reduceAmount);
+
         public abstract string Currency();
     }
 }

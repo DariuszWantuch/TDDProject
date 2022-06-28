@@ -62,7 +62,7 @@ namespace TDDTest
         public void DollarAdditionTest()
         {
             int dollarSum = Money.Dollar(10).Plus(20);
-            Assert.Equal(30,dollarSum);
+            Assert.Equal(30, dollarSum);
         }
 
         [Fact]
@@ -87,11 +87,19 @@ namespace TDDTest
             var dollar = Money.Dollar(10);
             var franc = Money.Franc(20);
 
-            Assert.True(dollar.Equals(Money.Dollar(20).Reduce(10)));
-            Assert.False(dollar.Equals(Money.Dollar(20).Reduce(15)));
+            var reduceDollar = Money.Dollar(20);
+            reduceDollar.Reduce(10);
 
-            Assert.True(franc.Equals(Money.Franc(40).Reduce(20)));
-            Assert.False(franc.Equals(Money.Franc(20).Reduce(10)));
+            var reduceFranc = Money.Franc(40);
+            reduceFranc.Reduce(20);
+
+            Assert.True(dollar.Equals(reduceDollar));
+            reduceDollar.Reduce(5);
+            Assert.False(dollar.Equals(reduceDollar));
+
+            Assert.True(franc.Equals(reduceFranc));
+            reduceFranc.Reduce(10);
+            Assert.False(franc.Equals(reduceFranc));
         }
     }
 }
