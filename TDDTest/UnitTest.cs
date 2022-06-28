@@ -42,7 +42,6 @@ namespace TDDTest
         {
             Assert.True(new Franc(50).Equals(new Franc(50)));
             Assert.False(new Franc(50).Equals(new Franc(51)));
-
         }
 
         [Fact]
@@ -80,6 +79,19 @@ namespace TDDTest
             Assert.True("50 CHF" == Money.Franc(50).ToString());
             Assert.False("10 USD" == Money.Dollar(20).ToString());
             Assert.False("50 CHF" == Money.Franc(100).ToString());
+        }
+
+        [Fact]
+        public void ReduceTest()
+        {
+            var dollar = Money.Dollar(10);
+            var franc = Money.Franc(20);
+
+            Assert.True(dollar.Equals(Money.Dollar(20).Reduce(10)));
+            Assert.False(dollar.Equals(Money.Dollar(20).Reduce(15)));
+
+            Assert.True(franc.Equals(Money.Franc(40).Reduce(20)));
+            Assert.False(franc.Equals(Money.Franc(20).Reduce(10)));
         }
     }
 }
