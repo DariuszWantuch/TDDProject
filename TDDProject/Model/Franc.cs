@@ -34,6 +34,13 @@ namespace TDDProject.Model
             return this.amount;
         }
 
+        public override bool Equals(object? obj)
+        {
+            Franc money = (Franc)obj;
+
+            return amount == money.amount;
+        }
+
         public override string ToString()
         {
             return this.amount + " " + this.currency;

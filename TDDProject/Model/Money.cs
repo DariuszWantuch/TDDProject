@@ -12,14 +12,6 @@ namespace TDDProject.Model
         protected int amount;
         protected string currency;
 
-        public override bool Equals(object? obj)
-        {
-            Money money = (Money)obj;
-
-            return amount == money.amount;
-        }
-
-
         public static Money Dollar(int amount)
         {
             return new Dollar(amount, "USD");
