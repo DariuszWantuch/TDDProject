@@ -1,4 +1,5 @@
 
+using System.Data.SqlTypes;
 using TDDProject.Model;
 using Xunit;
 
@@ -40,6 +41,15 @@ namespace TDDTest
         public void FrancEqualityTest()
         {
             Assert.True(new Franc(50).Equals(new Franc(50)));
+            Assert.False(new Franc(50).Equals(new Franc(51)));
+
+        }
+
+        [Fact]
+        public void FrancDollarTest()
+        {
+            Assert.False(Money.Dollar(50).Equals(Money.Dollar(51)));
+            Assert.True(Money.Dollar(50).Equals(Money.Dollar(50)));
         }
 
         [Fact]
@@ -71,7 +81,5 @@ namespace TDDTest
             Assert.False("10 USD" == Money.Dollar(20).ToString());
             Assert.False("50 CHF" == Money.Franc(100).ToString());
         }
-
     }
-    
 }
